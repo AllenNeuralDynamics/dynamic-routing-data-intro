@@ -1,4 +1,4 @@
-# hash:sha256:9e1b32164a0f11e31e35e9150bf5282192ab7548e2dfd20d43ff2da2582e4a71
+# hash:sha256:44b0837661512e848d96d5bed3bf108b6442b3ff6487c89cf13e5c0bdd0b71fd
 FROM registry.codeocean.allenneuraldynamics.org/codeocean/jupyterlab:3.6.1-miniconda4.12.0-python3.9-ubuntu20.04
 
 ARG DEBIAN_FRONTEND=noninteractive
@@ -123,7 +123,7 @@ RUN pip3 install -U --no-cache-dir \
     networkx==3.1 \
     npc-lims==0.1.66 \
     npc-session==0.1.21 \
-    npc-sessions \
+    npc-sessions==0.0.68 \
     numba==0.57.1 \
     numcodecs==0.11.0 \
     numexpr==2.8.5 \
