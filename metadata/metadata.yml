@@ -1,5 +1,5 @@
 metadata_version: 1
 name: dynamic-routing-data-intro 2023-09-27
-description: Basic structure of a capsule to be customized as needed.
+description: This capsule is to demonstrate data access for Dynamic Routing sessions. It uses the npc_sessions python package to get data in NWB format.
 authors:
-- name: AIND
+- name: bjhardcastle
