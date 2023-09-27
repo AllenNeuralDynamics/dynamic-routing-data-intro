@@ -3,6 +3,10 @@
 This capsule is to demonstrate data access for Dynamic Routing sessions.
 It uses the `npc_sessions` python package to get data in NWB format.
 
+## environment
+This should be set up ready to go, but if you need to update it the only required package is `npc_sessions` (latest version).
+Since `npc_sessions` has a lot of loosely specified dependencies, solving the environment for the capsule can take a while (pip tries to find a version of each dependency that's compatible with all the other dependencies - for certain packages this can lead to many minutues of waiting as pip downloads every published version of the package to test it). To speed this up, we publish a `requirements.txt` with pinned dependencies from a solved environment (for the latest version of Ubuntu x64) [here](https://github.com/AllenInstitute/npc_sessions/blob/main/requirements.txt). Codeocean allows uploading or pasting the contents of this file in `environment/pip3` - just make sure to add the latest version of `npc_sessions` too.
+
 ## credentials
 First, we need to make sure we have 2 sets of credentials:
 1. AWS (to find and read files on S3)
