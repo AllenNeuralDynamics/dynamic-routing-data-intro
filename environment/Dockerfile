@@ -1,4 +1,4 @@
-# hash:sha256:64bab192fa47b3c9f99197b5a4a4e168870b439eac5284fc9488b288924a6865
+# hash:sha256:fcd0785b3a5093d40a375c16ce20f776406784322cccc06fc0ae10b016f9c3bb
 FROM registry.codeocean.allenneuraldynamics.org/codeocean/jupyterlab:3.6.1-miniconda4.12.0-python3.9-ubuntu20.04
 
 ARG DEBIAN_FRONTEND=noninteractive
@@ -53,6 +53,10 @@ RUN apt-get update \
         sysvinit-utils=2.96-2.1ubuntu1 \
         unzip=6.0-25ubuntu1 \
     && rm -rf /var/lib/apt/lists/*
+
+RUN conda install -y \
+        jupyter==1.0.0 \
+    && conda clean -ya
 
 RUN pip3 install -U --no-cache-dir \
     setuptools==68.2.2
@@ -166,9 +170,9 @@ RUN pip3 install -U --no-cache-dir \
     neo==0.12.0 \
     nest-asyncio==1.5.8 \
     networkx==3.1 \
-    npc-lims==0.1.72 \
+    npc-lims==0.1.74 \
     npc-session==0.1.22 \
-    npc-sessions \
+    npc-sessions==0.0.77 \
     numba==0.58.0 \
     numcodecs==0.11.0 \
     numexpr==2.8.7 \
