@@ -1,4 +1,4 @@
-# hash:sha256:fcd0785b3a5093d40a375c16ce20f776406784322cccc06fc0ae10b016f9c3bb
+# hash:sha256:00eaef09d3e15d7db7d1df326d06fdf3136f16241634b1a0b93533921a6d68a1
 FROM registry.codeocean.allenneuraldynamics.org/codeocean/jupyterlab:3.6.1-miniconda4.12.0-python3.9-ubuntu20.04
 
 ARG DEBIAN_FRONTEND=noninteractive
@@ -11,52 +11,6 @@ ARG AWS_SECRET_ACCESS_KEY
 ARG GIT_ASKPASS
 ARG GIT_ACCESS_TOKEN
 COPY git-askpass /
-
-RUN apt-get update \
-    && apt-get install -y --no-install-recommends \
-        apt=2.0.5 \
-        base-passwd=3.5.47 \
-        bash=5.0-6ubuntu1.1 \
-        bsdutils=1:2.34-0.1ubuntu9.1 \
-        build-essential=12.8ubuntu1.1 \
-        ca-certificates=20210119~20.04.1 \
-        coreutils=8.30-3ubuntu2 \
-        curl=7.68.0-1ubuntu2.5 \
-        dash=0.5.10.2-6 \
-        debconf=1.5.73 \
-        diffutils=1:3.7-3 \
-        e2fsprogs=1.45.5-2ubuntu1 \
-        fdisk=2.34-0.1ubuntu9.1 \
-        findutils=4.7.0-1ubuntu1 \
-        git=1:2.25.1-1ubuntu3.1 \
-        gnupg2=2.2.19-3ubuntu2.1 \
-        grep=3.4-1 \
-        gzip=1.10-0ubuntu4 \
-        hostname=3.23 \
-        less=551-1ubuntu0.1 \
-        libacl1=2.2.53-6 \
-        libattr1=1:2.4.48-5 \
-        libext2fs2=1.45.5-2ubuntu1 \
-        libpam-modules-bin=1.3.1-5ubuntu4.1 \
-        libpam-runtime=1.3.1-5ubuntu4.1 \
-        libpcre3=2:8.39-12build1 \
-        libss2=1.45.5-2ubuntu1 \
-        locales=2.31-0ubuntu9.2 \
-        mawk=1.3.4.20200120-2 \
-        mount=2.34-0.1ubuntu9.1 \
-        nano=4.8-1ubuntu1 \
-        ncurses-base=6.2-0ubuntu2 \
-        ncurses-bin=6.2-0ubuntu2 \
-        procps=2:3.3.16-1ubuntu2.1 \
-        sed=4.7-1 \
-        sensible-utils=0.0.12+nmu1 \
-        sysvinit-utils=2.96-2.1ubuntu1 \
-        unzip=6.0-25ubuntu1 \
-    && rm -rf /var/lib/apt/lists/*
-
-RUN conda install -y \
-        jupyter==1.0.0 \
-    && conda clean -ya
 
 RUN pip3 install -U --no-cache-dir \
     setuptools==68.2.2
@@ -170,9 +124,9 @@ RUN pip3 install -U --no-cache-dir \
     neo==0.12.0 \
     nest-asyncio==1.5.8 \
     networkx==3.1 \
-    npc-lims==0.1.74 \
-    npc-session==0.1.22 \
-    npc-sessions==0.0.77 \
+    npc-lims==0.1.75 \
+    npc-session==0.1.26 \
+    npc-sessions==0.0.80 \
     numba==0.58.0 \
     numcodecs==0.11.0 \
     numexpr==2.8.7 \
